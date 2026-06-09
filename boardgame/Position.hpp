@@ -1,15 +1,29 @@
 #pragma once
 
 class Position {
-    
     private:
         int row;
         int column;
+    
+        public:
+            Position(int _row, int _column) {
+                row = _row;
+                column = _column;
+            }
 
-    public:
+            int getRow() const {
+                return row;
+            }
 
-        Position(int& row, int& column);
+            int getColumn() const {
+                return column;
+            }
 
-        int getRow();
-        int getColumn();
+            void setRow(int new_row) {
+                row = new_row;
+            }
+
+            void setColumn(int new_column) {
+                column = new_column;
+            }
 };

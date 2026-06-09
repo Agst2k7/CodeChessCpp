@@ -1,0 +1,1 @@
+g++ main.cpp UI.cpp boardgame/Board.cpp chess/pieces/King.cpp

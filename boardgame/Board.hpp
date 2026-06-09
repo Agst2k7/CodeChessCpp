@@ -1,20 +1,16 @@
 #pragma once
-#include <vector>
-
+#include "Position.hpp"
 #include "Piece.hpp"
 
-class Board {
+class Piece;
 
+class Board {
     private:
-        int rows = 8;
-        int columns = 8;
-        Piece places[8][8];
+        Piece* grid[8][8] {};
 
     public:
-        Board();
+        void placePiece(Piece &piece, Position& pos);
 
-        Piece piece(int&row, int& column);
-        void placePiece(Piece& piece, Position& position);
-
+        Piece* piece(const Position& pos) const;
+        bool isThereAPiece(const Position& pos) const;
 };
-
