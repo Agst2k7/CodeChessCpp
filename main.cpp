@@ -1,19 +1,14 @@
-#include "boardgame/Board.hpp"
+
 #include "UI.hpp"
-#include "chess/pieces/King.hpp"
+#include "chess/ChessMatch.hpp"
 
 
 int main() {
 
-    Board b;
-    King k(WHITE);
-    Position pos(2, 3);
+    ChessMatch chessmatch;
+    chessmatch.initialSetup();
 
-
-
-    b.placePiece(k, pos);
-
-    drawBoard(b);
+    drawBoard(chessmatch.getBoard());
 
     return 0;
 }

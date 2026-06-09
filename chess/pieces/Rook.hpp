@@ -3,10 +3,10 @@
 #include "../ChessPiece.hpp"
 
 
-class King : public ChessPiece {
+class Rook : public ChessPiece {
 
     public:
-        King(Color color) : ChessPiece(color) {}
+        Rook(Color color) : ChessPiece(color) {}
 
         std::string toString() const override;
 };

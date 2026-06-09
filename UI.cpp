@@ -7,14 +7,16 @@
 void drawBoard(const Board& board) {
     bool isWhite;
 
+    std::cout << "  /=================\\" << '\n';
     for(int r=0; r<8; ++r) {
         if (r%2 == 0) { isWhite = true; }
         else { isWhite = false; }
-        std::cout << (8-r) << " ";
+        std::cout << (8-r) << " | ";
         for(int c=0; c<8; ++c, isWhite = !isWhite) {
             Position pos(r, c);
             if(board.isThereAPiece(pos)) {
-                
+                Piece* piece = board.piece(pos);
+                std::cout << piece->toString();
             } else {
             if (isWhite) {
                 std::cout << "=";
@@ -22,9 +24,10 @@ void drawBoard(const Board& board) {
                 std::cout << "-";
             } }
             std::cout << " ";
-        } std::cout << '\n';
+        } std::cout << "| "<<'\n';
     } 
-    std::cout << "  A B C D E F G H" << '\n';
+    std::cout << "  \\=================/" << '\n';
+    std::cout << "    A B C D E F G H" << '\n';
     
 }
 

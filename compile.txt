@@ -1,1 +1,1 @@
-g++ main.cpp UI.cpp boardgame/Board.cpp chess/pieces/King.cpp
+g++ main.cpp UI.cpp boardgame/Board.cpp chess/pieces/King.cpp chess/ChessMatch.cpp boardgame/Utils.cpp chess/pieces/Pawn.cpp chess/pieces/Knight.cpp chess/pieces/Bishop.cpp chess/pieces/Rook.cpp chess/pieces/Queen.cpp

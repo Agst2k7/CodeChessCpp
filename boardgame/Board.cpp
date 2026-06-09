@@ -1,4 +1,5 @@
 #include "Board.hpp"
+#include <iostream>
 
 Piece* Board::piece(const Position& pos) const {
     return grid[pos.getRow()][pos.getColumn()];

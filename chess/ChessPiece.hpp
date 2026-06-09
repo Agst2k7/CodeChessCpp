@@ -11,7 +11,7 @@ class ChessPiece : public Piece {
                 color = _color;
             }
 
-            Color getColor() {
+            Color getColor() const {
                 return color;
             }
 };
